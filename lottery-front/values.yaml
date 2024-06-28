@@ -115,10 +115,10 @@
 replicaCount: 1
 
 image:
-  repository: freshbasil/front
+  repository: freshbasil/lottery_front
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "nginx"
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
