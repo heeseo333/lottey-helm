@@ -153,19 +153,19 @@ securityContext:
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 80
-  targetPort: 80
 
 ingress:
-  enabled: false
-  className: ""
+  enabled: true
+  className: "nginx"
   annotations:
-    {}
+    { kubernetes.io/ingress.class: nginx }
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - paths:
+    - host: localhost
+      paths:
         - path: /
           pathType: ImplementationSpecific
   tls: []
