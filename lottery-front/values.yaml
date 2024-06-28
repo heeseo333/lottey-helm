@@ -164,7 +164,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: localhost
+    - host: http://10.110.209.228
       paths:
         - path: /
           pathType: ImplementationSpecific
